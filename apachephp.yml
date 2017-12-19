@@ -1,0 +1,21 @@
+---
+ - name: install apache & php
+   hosts: web
+   become: true
+   become_user: root
+   gather_facts: true
+   tasks:
+    - name: "Install apache2"
+      package: name=apache2 state=present
+    - name: "Install apache2-php5"
+      apt: name=libapache2-mod-php5 state=present
+    - name: "Install php-cli"
+      apt: name=php5-cli state=present
+    - name: "Install php-mcrypt"
+      apt: name=php5-mcrypt state=present
+    - name: "Install php-gd"
+      apt: name=php5-gd state=present
+    - name: install HTML file
+      copy: src=sign-in.html dest=/var/www/html/index.html mode=0664
+    - name: install stylesheet
+      copy: src=style.css dest=/var/www/html/style.css mode=0664
