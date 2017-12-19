@@ -1,6 +1,6 @@
   - hosts: database
     sudo: True
-    name: Install MySQL packages
+  - name: Install MySQL packages
     apt: pkg={{item}} state=installed
     with_items:
       - bundler
