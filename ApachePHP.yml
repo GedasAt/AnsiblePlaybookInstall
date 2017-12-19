@@ -1,6 +1,6 @@
 ---
  - name: install apache & php
-   hosts: web
+   hosts: webserver
    become: true
    become_user: root
    gather_facts: true
