@@ -1,6 +1,6 @@
 ---
  - name: install apache & php
-   hosts: webserver
+   hosts: web
    tasks:
     - name: "Install apache2"
       apt: name=apache2 state=present
