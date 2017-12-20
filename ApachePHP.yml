@@ -13,6 +13,6 @@
     - name: "Install php-gd"
       apt: name=php5-gd state=present
     - name: install HTML file
-      copy: src=sign-in.html dest=/var/www/html/index.html mode=0664
+      copy: src=/Website/Sign-in.html dest=/var/www/html/Sign-in.html mode=0664
     - name: install stylesheet
-      copy: src=style.css dest=/var/www/html/style.css mode=0664
+      copy: src=/Website/Style.css dest=/var/www/html/Style.css mode=0664
