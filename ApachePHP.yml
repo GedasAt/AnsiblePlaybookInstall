@@ -17,4 +17,4 @@
     - name: install stylesheet
       copy: src=Website/Style.css dest=/var/www/html/Style.css mode=0664
     - name: installing MAIN screen
-      copy: src=Website/index.html dest=/var/www/html/Style.css mode=0664
+      copy: src=Website/index.html dest=/var/www/html/index.html mode=0664
