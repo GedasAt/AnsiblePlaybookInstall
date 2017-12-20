@@ -3,7 +3,7 @@
    hosts: webserver
    tasks:
     - name: "Install apache2"
-      package: name=apache2 state=present
+      apt: name=apache2 state=present
     - name: "Install apache2-php5"
       apt: name=libapache2-mod-php5 state=present
     - name: "Install php-cli"
